@@ -1,0 +1,183 @@
+body,html {
+height: 100%;
+width: 100%;
+background-image: url(https://s20.postimg.org/70vr40fq5/dust_scratches.png);
+background-repeat: repeat;
+text-shadow: 1px 1px 1px #000;
+box-shadow: 1px 1px 1px #000;
+overflow: hidden;
+}
+
+h1 {
+  font-size: 80px;
+  padding-top: 20px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  align-self: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  padding: 5px;
+  margin: 5px;
+  z-index: 20;
+}
+
+.title {
+  text-align: center;
+  color: rgba(80, 80, 80, 0.9);
+}
+
+.profileBox {
+  height: 800px;
+  width: 90%;
+  position: absolute;
+  top: 100px;
+  left: 5%;
+}
+
+.row {
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  display: inline-block;
+}
+
+.profile {
+  width: 20%;
+  height: 100%;
+  display: inline;
+  overflow: hidden;
+  position: absolute;
+  border: solid 2px black;
+  z-index: 0;
+}
+
+.titleText {
+  height: 20%;
+  width: 80%;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  z-index: 20;
+  overflow: hidden;
+  background: rgba(50, 50, 50, 0.8);
+  color: #fff;
+  border: solid 2px black;
+  text-align: center;
+}
+
+.statusText {
+  width: 80%;
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  z-index: 1;
+  overflow: hidden;
+  background: rgba(50, 50, 50, 0.8);
+  color: #fff;
+  border: solid 2px black;
+  text-align: center;
+
+}
+
+.offlineBox {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+#row0 {
+  top: 10%;
+}
+
+#row1 {
+  bottom: 1%;
+}
+
+#box0 {
+  left: 0;
+}
+#box1 {
+  left: 20%;
+}
+#box2 {
+  left: 40%;
+}
+#box3 {
+  left: 60%;
+}
+#box4 {
+  left: 80%;
+}
+#box5 {
+  left: 0;
+}
+#box6 {
+  left: 20%;
+}
+#box7 {
+  left: 40%;
+}
+#box8 {
+  left: 60%;
+}
+#box9 {
+  left: 80%;
+}
+
+#isfreecodecampOffline {
+  z-index: -10;
+}
+
+#isstorbeckOffline {
+  z-index: -10;
+}
+
+#isESL_SC2Offline {
+  z-index: -10;
+}
+
+#isOgamingSC2Offline {
+  z-index: -10;
+}
+
+#iscretetionOffline {
+  z-index: -10;
+}
+
+#ishabathcxOffline {
+  z-index: -10;
+}
+
+#isRobotCalebOffline {
+  z-index: -10;
+}
+
+#isnoobs2ninjasOffline {
+  z-index: -10;
+}
+
+#isnetmuxOffline {
+  z-index: -10;
+}
+
+#is247OnLoLOffline {
+  z-index: -10;
+}
+
+#credit{
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+  width: 100%
+}
