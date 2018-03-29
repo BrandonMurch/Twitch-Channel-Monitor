@@ -1,183 +1,165 @@
-body,html {
-height: 100%;
-width: 100%;
-background-image: url(https://s20.postimg.org/70vr40fq5/dust_scratches.png);
-background-repeat: repeat;
-text-shadow: 1px 1px 1px #000;
-box-shadow: 1px 1px 1px #000;
-overflow: hidden;
-}
+/*
 
-h1 {
-  font-size: 80px;
-  padding-top: 20px;
-}
+This document is written in BEM.
+Block = .block
+Element = .block__element
+Modifier = .block__element--modifier || .block--modifier
 
-img {
+*/
+
+/* Block ******************************************************************/
+.background{
   height: 100%;
   width: 100%;
-  z-index: 1;
-  align-self: center;
+  background-image: url(https://s20.postimg.org/u5ub6y33x/light-bokeh-blur-sky-night-sunlight-971487-pxhere.com-min.jpg);
+  background-size: cover;
+  overflow: hidden;
 }
 
-a {
-  text-decoration: none;
-}
-
-h2 {
-  padding: 5px;
-  margin: 5px;
-  z-index: 20;
-}
-
-.title {
-  text-align: center;
-  color: rgba(80, 80, 80, 0.9);
-}
-
-.profileBox {
-  height: 800px;
+.profile {
+  height: 90%;
   width: 90%;
   position: absolute;
-  top: 100px;
+  top: 5%;
   left: 5%;
 }
 
-.row {
+.credit{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  color: black;
+}
+
+/* Element ****************************************************************/
+
+.profile__row {
   width: 100%;
   height: 40%;
   position: absolute;
   display: inline-block;
 }
 
-.profile {
+.profile__box {
   width: 20%;
   height: 100%;
   display: inline;
   overflow: hidden;
   position: absolute;
-  border: solid 2px black;
   z-index: 0;
+  border: solid 2px black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #000;
+
 }
 
-.titleText {
-  height: 20%;
+.profile__title {
   width: 80%;
   position: absolute;
-  top: 5%;
+  top: 2%;
   left: 10%;
   z-index: 20;
   overflow: hidden;
-  background: rgba(50, 50, 50, 0.8);
-  color: #fff;
-  border: solid 2px black;
+  background: transparent;
   text-align: center;
+  border-radius: 5px;
 }
 
-.statusText {
+.profile__titleText {
+  padding: 5px;
+  margin: 5px;
+  z-index: 20;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.profile__link {
+  text-decoration: none;
+}
+
+.profile__image {
+  height: 60%;
+  width: 60%;
+  z-index: 1;
+  position: absolute;
+  left: -20%;
+  top: -10%;
+  padding: 40%;
+  background-color: grey;
+  background-image: url(https://s20.postimg.org/qm8dh4kyl/px_by_Gre3g-min.png);
+  background-repeat: repeat;
+}
+
+.profile__status {
   width: 80%;
   position: absolute;
-  bottom: 5%;
+  bottom: 2%;
   left: 10%;
   z-index: 1;
   overflow: hidden;
-  background: rgba(50, 50, 50, 0.8);
-  color: #fff;
-  border: solid 2px black;
   text-align: center;
-
+  background-image: url(https://s20.postimg.org/qm8dh4kyl/px_by_Gre3g-min.png);
+  color: #fff;
+  border-radius: 5px;
 }
 
-.offlineBox {
+
+.profile__offlineDim {
   position: absolute;
   height: 100%;
   width: 100%;
+  z-index: -10;
   background: rgba(0, 0, 0, 0.8);
+
 }
 
+/* Modifier ***************************************************************/
 
-#row0 {
-  top: 10%;
-}
-
-#row1 {
-  bottom: 1%;
+.profile__row--0 {
+  top: 0;
 }
 
-#box0 {
-  left: 0;
+.profile__row--1 {
+  bottom: 10%;
 }
-#box1 {
-  left: 20%;
+
+.profile__box--0 {
+  left: -2%;
 }
-#box2 {
+
+.profile__box--1 {
+  left: 19%;
+}
+
+.profile__box--2 {
   left: 40%;
 }
-#box3 {
-  left: 60%;
+
+.profile__box--3 {
+  left: 61%;
 }
-#box4 {
-  left: 80%;
+
+.profile__box--4 {
+  left: 82%;
 }
-#box5 {
-  left: 0;
+
+.profile__box--5 {
+  left: -2%;
 }
-#box6 {
-  left: 20%;
+
+.profile__box--6 {
+  left: 19%;
 }
-#box7 {
+
+.profile__box--7 {
   left: 40%;
 }
-#box8 {
-  left: 60%;
-}
-#box9 {
-  left: 80%;
+
+.profile__box--8 {
+  left: 61%;
 }
 
-#isfreecodecampOffline {
-  z-index: -10;
-}
-
-#isstorbeckOffline {
-  z-index: -10;
-}
-
-#isESL_SC2Offline {
-  z-index: -10;
-}
-
-#isOgamingSC2Offline {
-  z-index: -10;
-}
-
-#iscretetionOffline {
-  z-index: -10;
-}
-
-#ishabathcxOffline {
-  z-index: -10;
-}
-
-#isRobotCalebOffline {
-  z-index: -10;
-}
-
-#isnoobs2ninjasOffline {
-  z-index: -10;
-}
-
-#isnetmuxOffline {
-  z-index: -10;
-}
-
-#is247OnLoLOffline {
-  z-index: -10;
-}
-
-#credit{
-  position: absolute;
-  bottom: 5px;
-  text-align: center;
-  width: 100%
+.profile__box--9 {
+  left: 82%;
 }

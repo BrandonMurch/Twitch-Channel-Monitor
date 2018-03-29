@@ -1,3 +1,9 @@
+/*
+@description - A monitor for a few twitch channels. Dims the box when the user
+               is offline. Displays the status when they're online.
+@author - Brandon - Brandon.Murch@protonmail.com
+*/
+
 $(document).ready(function() {
   let streamers = [];
   let twitchStreamer = function(name, status, logo, url){
@@ -20,8 +26,8 @@ $(document).ready(function() {
   function getTwitch(user) {
     $.get('https://wind-bow.glitch.me/twitch-api/channels/' + user, function(data) {
       streamers[user] = new twitchStreamer(data.display_name, data.status, data.logo, data.url)
-      let statusText = '#' + user + 'Status'
-      let userOffline = '#is' + user + 'Offline'
+      let statusText = '.profile__status--' + user;
+      let userOffline = '.profile__offlineDim--' + user;
       if (data.status === null) {
         $(userOffline).css('z-index', '10');
         $(statusText).css('z-index', '-10');

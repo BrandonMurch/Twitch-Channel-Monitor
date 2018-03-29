@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
   <head>
+    <meta name="author" content="Brandon Murch">
+    <meta name="description" content="A monitor for a few twitch channels">
     <meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
     <meta content='utf-8' http-equiv='encoding'>
     <title>Twitch Stream</title>
@@ -8,129 +10,126 @@
     <script src='https://code.jquery.com/jquery-3.3.1.js'></script>
     <script src='twitch.js'></script>
   </head>
-  <body>
-    <div class='title'>
-      <h1>Twitch streaming</h1>
-    </div>
-    <div class='profileBox'>
-      <div id='row0' class='row'>
-  <!-- Free Code Camp -->
-        <div id='box0' class='profile'>
-          <a href ='https://www.twitch.tv/freecodecamp' target='_blank'>
-            <div id='isfreecodecampOffline' class='offlineBox'></div>
-            <img src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/freecodecamp-profile_image-d9514f2df0962329-300x300.png'>
-            <div class = 'titleText'>
-              <h2>FreeCodeCamp</h2>
+  <body class="background">
+    <article class='profile'>
+      <div class='profile__row profile__row--0'>
+<!-- Free Code Camp -->
+        <section class='profile__box profile__box--0'>
+          <a class="profile__link"  href ='https://www.twitch.tv/freecodecamp' target='_blank'>
+            <div class='profile__offlineDim profile__offlineDim--freecodecamp'></div>
+            <img class="profile__image" class="profile__image" src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/freecodecamp-profile_image-d9514f2df0962329-300x300.png'  alt = "freecodecamp Profile">
+            <div class = 'profile__title'>
+              <h2 class="profile__titleText">FreeCodeCamp</h2>
             </div>
-            <div id='freecodecampStatus' class = 'statusText'></div>
+            <div class = 'profile__status profile__status--freecodecamp'></div>
           </a>
-        </div>
-  <!-- storbeck -->
-          <div id='box1' class='profile'>
-          <a href ='https://www.twitch.tv/storbeck'target='_blank'>
-            <div id='isstorbeckOffline' class='offlineBox'></div>
-            <img src = 'https://static-cdn.jtvnw.net/user-default-pictures/49988c7b-57bc-4dee-bd4f-6df4ad215d3a-profile_image-300x300.jpg'>
-            <div class = 'titleText'>
-              <h2>storbeck</h2>
+        </section>
+<!-- storbeck -->
+          <section class='profile__box profile__box--1'>
+          <a class="profile__link"  href ='https://www.twitch.tv/storbeck'target='_blank'>
+            <div class='profile__offlineDim profile__offlineDim--storbeck'></div>
+            <img class="profile__image" src = 'https://static-cdn.jtvnw.net/user-default-pictures/49988c7b-57bc-4dee-bd4f-6df4ad215d3a-profile_image-300x300.jpg'  alt = "storbeck Profile">
+            <div class = 'profile__title'>
+              <h2 class="profile__titleText">storbeck</h2>
             </div>
-            <div id='storbeckStatus' class = 'statusText'></div>
+            <div class = 'profile__status profile__status--storbeck'></div>
           </a>
-        </div>
-  <!-- ESL_SC2 -->
-          <div id='box2' class='profile'>
-          <a href =	'https://www.twitch.tv/esl_sc2'target='_blank'>
-            <div id='isESL_SC2Offline' class='offlineBox'></div>
-            <img src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/esl_sc2-profile_image-d6db9488cec97125-300x300.jpeg'>
-            <div class = 'titleText'>
-              <h2>ESL_SC2</h2>
+        </section>
+<!-- ESL_SC2 -->
+          <section class='profile__box profile__box--2'>
+          <a class="profile__link"  href =	'https://www.twitch.tv/esl_sc2'target='_blank'>
+            <div class='profile__offlineDim profile__offlineDim--ESL_SC2'></div>
+            <img class="profile__image" src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/esl_sc2-profile_image-d6db9488cec97125-300x300.jpeg'  alt = "esl_sc2 Profile">
+            <div class = 'profile__title'>
+              <h2 class="profile__titleText">ESL_SC2</h2>
             </div>
-            <div id='ESL_SC2Status' class = 'statusText'></div>
+            <div class = 'profile__status profile__status--ESL_SC2'></div>
           </a>
-        </div>
-  <!-- OgamingSC2 -->
-          <div id='box3' class='profile'>
-          <a href ='https://www.twitch.tv/ogamingsc2'target='_blank'>
-            <div id='isOgamingSC2Offline' class='offlineBox'></div>
-            <img src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/ogamingsc2-profile_image-9021dccf9399929e-300x300.jpeg'>
-            <div class = 'titleText'>
-              <h2>OgamingSC2</h2>
+        </section>
+<!-- OgamingSC2 -->
+          <section class='profile__box profile__box--3'>
+          <a class="profile__link"  href ='https://www.twitch.tv/ogamingsc2'target='_blank'>
+            <div class='profile__offlineDim profile__offlineDim--OgamingSC2'></div>
+            <img class="profile__image" src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/ogamingsc2-profile_image-9021dccf9399929e-300x300.jpeg' alt = "OgamingSC2 Profile">
+            <div class = 'profile__title'>
+              <h2 class="profile__titleText">OgamingSC2</h2>
             </div>
-            <div id='OgamingSC2Status' class = 'statusText'></div>
+            <div class = 'profile__status profile__status--OgamingSC2'></div>
           </a>
-        </div>
-  <!-- cretetion -->
-        <div id='box4' class='profile'>
-          <a href ='https://www.twitch.tv/cretetion'target='_blank'>
-            <div id='iscretetionOffline' class='offlineBox'></div>
-            <img src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/cretetion-profile_image-12bae34d9765f222-300x300.jpeg'>
-            <div class = 'titleText'>
-              <h2>cretetion</h2>
+        </section>
+<!-- cretetion -->
+        <section class='profile__box profile__box--4'>
+          <a class="profile__link"  href ='https://www.twitch.tv/cretetion'target='_blank'>
+            <div class='profile__offlineDim profile__offlineDim--cretetion'></div>
+            <img class="profile__image" src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/cretetion-profile_image-12bae34d9765f222-300x300.jpeg'  alt = "cretetion Profile">
+            <div class = 'profile__title'>
+              <h2 class="profile__titleText">cretetion</h2>
             </div>
-            <div id='cretetionStatus' class = 'statusText'></div>
+            <div class = 'profile__status profile__status--cretetion'></div>
           </a>
         </div>
       </div>
-      <div id = 'row1' class='row'>
-  <!-- habathcx -->
-        <div id='box5' class='profile'>
-        <a href ='https://www.twitch.tv/habathcx'target='_blank'>
-          <div id='ishabathcxOffline' class='offlineBox'></div>
-          <img src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/habathcx-profile_image-d75385dbe4f42a66-300x300.jpeg'>
-          <div class = 'titleText'>
-            <h2>'habathcx'</h2>
+      <section class='profile__row profile__row--1'>
+<!-- habathcx -->
+        <section class='profile__box profile__box--5'>
+        <a class="profile__link"  href ='https://www.twitch.tv/habathcx'target='_blank'>
+          <div class='profile__offlineDim profile__offlineDim--habathcx'></div>
+          <img class="profile__image" src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/habathcx-profile_image-d75385dbe4f42a66-300x300.jpeg'   alt = "habathcx Profile">
+          <div class = 'profile__title'>
+            <h2 class="profile__titleText">'habathcx'</h2>
           </div>
-          <div id='habathcxStatus' class = 'statusText'></div>
+          <div class = 'profile__status profile__status--habathcx'></div>
         </a>
-      </div>
-  <!-- robotcaleb -->
-      <div id='box6' class='profile'>
-        <a href ='https://www.twitch.tv/robotcaleb'target='_blank'>
-          <div id='isRobotCalebOffline' class='offlineBox'></div>
-          <img src = 	'https://static-cdn.jtvnw.net/jtv_user_pictures/robotcaleb-profile_image-9422645f2f0f093c-300x300.png'>
-          <div class = 'titleText'>
-            <h2>RobotCaleb</h2>
+      </section>
+<!-- robotcaleb -->
+      <section class='profile__box profile__box--6'>
+        <a class="profile__link"  href ='https://www.twitch.tv/robotcaleb'target='_blank'>
+          <div class='profile__offlineDim profile__offlineDim--RobotCaleb'></div>
+          <img class="profile__image" src = 	'https://static-cdn.jtvnw.net/jtv_user_pictures/robotcaleb-profile_image-9422645f2f0f093c-300x300.png'  alt = "robotcaleb Profile">
+          <div class = 'profile__title'>
+            <h2 class="profile__titleText">RobotCaleb</h2>
           </div>
-          <div id='RobotCalebStatus' class = 'statusText'></div>
+          <div class = 'profile__status profile__status--RobotCaleb'></div>
         </a>
-      </div>
-  <!-- noobs2ninjas -->
-      <div id='box7' class='profile'>
-        <a href ='https://www.twitch.tv/noobs2ninjas'target='_blank'>
-          <div id='isnoobs2ninjasOffline' class='offlineBox'></div>
-          <img src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/noobs2ninjas-profile_image-34707f847a73d934-300x300.png'>
-          <div class = 'titleText'>
-            <h2>noobs2ninjas</h2>
+      </section>
+<!-- noobs2ninjas -->
+      <section class='profile__box profile__box--7'>
+        <a class="profile__link"  href ='https://www.twitch.tv/noobs2ninjas'target='_blank'>
+          <div class='profile__offlineDim profile__offlineDim--noobs2ninjas'></div>
+          <img class="profile__image" src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/noobs2ninjas-profile_image-34707f847a73d934-300x300.png'  alt = "noobs2ninjas Profile">
+          <div class = 'profile__title'>
+            <h2 class="profile__titleText">noobs2ninjas</h2>
           </div>
-          <div id='noobs2ninjasStatus' class = 'statusText'></div>
+          <div class = 'profile__status profile__status--noobs2ninjas'></div>
         </a>
-      </div>
-  <!-- netmux -->
-      <div id='box8' class='profile'>
-        <a href ='https://www.twitch.tv/netmux'target='_blank'>
-          <div id='isnetmuxOffline' class='offlineBox'></div>
-          <img src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/be0b87c9-64e5-4bea-bba8-29078fe343e3-profile_image-300x300.png'>
-          <div class = 'titleText'>
-            <h2>netmux</h2>
+      </section>
+<!-- netmux -->
+      <div class='profile__box profile__box--8'>
+        <a class="profile__link"  href ='https://www.twitch.tv/netmux'target='_blank'>
+          <div class='profile__offlineDim profile__offlineDim--netmux'></div>
+          <img class="profile__image" src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/be0b87c9-64e5-4bea-bba8-29078fe343e3-profile_image-300x300.png'  alt = "netmux Profile">
+          <div class = 'profile__title'>
+            <h2 class="profile__titleText">netmux</h2>
           </div>
-          <div id='netmuxStatus' class = 'statusText'>
+          <div class = 'profile__status profile__status--netmux'>
           </div>
         </a>
       </a>
     </div>
-  <!-- 247OnLoL -->
-    <div id='box9' class='profile'>
-      <a href ='https://www.twitch.tv/247onlol'target='_blank'>
-        <div id='is247OnLoLOffline' class='offlineBox'></div>
-        <img src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/247onlol-profile_image-9c31236f6d3aa42f-300x300.jpeg'>
-        <div class = 'titleText'>
-          <h2>247OnLoL</h2>
+<!-- 247OnLoL -->
+    <section class='profile__box profile__box--9'>
+      <a class="profile__link"  href ='https://www.twitch.tv/247onlol'target='_blank'>
+        <div class='profile__offlineDim profile__offlineDim--247OnLoL'></div>
+        <img class="profile__image" src = 'https://static-cdn.jtvnw.net/jtv_user_pictures/247onlol-profile_image-9c31236f6d3aa42f-300x300.jpeg'  alt = "247OnLoL Profile">
+        <div class = 'profile__title'>
+          <h2 class="profile__titleText">247OnLoL</h2>
         </div>
-        <div id='247OnLoLStatus' class = 'statusText'>
+        <div class = 'profile__status profile__status--247OnLoL'>
         </div>
       </a>
       </div>
-    </div>
-  </div>
-  <p id = 'credit'> Designed by Brandon Murch </p>
+    </section>
+  </article>
+  <p class = 'credit'> Designed by Brandon Murch </p>
   </body>
 </html>
